@@ -8,6 +8,9 @@ jobs:
       name: node/default
       tag: '10.4'
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "d1:6d:c4:9c:91:18:d5:a9:b3:f8:37:3c:33:0a:05:78"
       - checkout
       - node/with-cache:
           steps:
